@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Teste home</h1>
+    <ul class="task-list">
+        {% for about in about %}
+        <li class="task-item">
+            <span><a href="/about/{{about.id}}">{{about.titulo}}</a></span>
+            <span><i class="fas fa-trash"></i></span>
+            <span><i class="fas fa-edit"></i></span>
+        </li>
+    </ul>
+    {% endfor %}
+{% endblock %}
